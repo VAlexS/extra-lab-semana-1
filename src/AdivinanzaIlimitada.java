@@ -37,10 +37,7 @@ public class AdivinanzaIlimitada {
 
         }while (numero != secretNumber);
 
-        if (contadorIntentos == 0)
-            System.out.println("¡Enhorabuena, acertaste a la primera");
-        else
-            System.out.println("Enhorabuena, has acertado despues de "+contadorIntentos+" intentos");
+        System.out.println("Enhorabuena, has acertado despues de "+contadorIntentos+" intentos");
 
 
     }
