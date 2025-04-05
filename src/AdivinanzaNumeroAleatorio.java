@@ -14,6 +14,8 @@ public class AdivinanzaNumeroAleatorio {
 
     public static void main(String[] args) {
 
+        //esta es una version de la adivinanza de un numero pero con intentos limitados
+
         Random random = new Random();
         int secretNumber = random.nextInt(100) + 1; // Genera un número int aleatorio entre 1 y 100
 
