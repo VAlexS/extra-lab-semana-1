@@ -19,7 +19,7 @@ public class AdivinanzaIlimitada {
 
         System.out.println("Este script se trata de un juego que consiste en adivinar un numero. Los intentos son ilimitados");
         Random random = new Random();
-        int secretNumber = random.nextInt(100) + 1; // Genera un número int aleatorio entre 1 y 100
+        final int SECRET_NUMBER = random.nextInt(100) + 1; // Genera un número int aleatorio entre 1 y 100
 
         var scanner = new Scanner(System.in);
 
@@ -31,11 +31,11 @@ public class AdivinanzaIlimitada {
             System.out.println("¿Qué numero crees que es?");
             numero = scanner.nextInt();
 
-            mostrarPista(numero, secretNumber);
+            mostrarPista(numero, SECRET_NUMBER);
 
             contadorIntentos++;
 
-        }while (numero != secretNumber);
+        }while (numero != SECRET_NUMBER);
 
         System.out.println("Enhorabuena, has acertado despues de "+contadorIntentos+" intentos");
 

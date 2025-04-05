@@ -17,7 +17,7 @@ public class AdivinanzaNumeroAleatorio {
         //esta es una version de la adivinanza de un numero pero con intentos limitados
 
         Random random = new Random();
-        int secretNumber = random.nextInt(100) + 1; // Genera un número int aleatorio entre 1 y 100
+        final int SECRET_NUMBER = random.nextInt(100) + 1; // Genera un número int aleatorio entre 1 y 100
 
         final int INTENTOS = 10;
 
@@ -29,7 +29,7 @@ public class AdivinanzaNumeroAleatorio {
 
         int intentosConsumidos = 0;
 
-        if (numero == secretNumber)
+        if (numero == SECRET_NUMBER)
             System.out.println("¡Enhorabuena, has acertado!");
         else{
 
@@ -39,10 +39,10 @@ public class AdivinanzaNumeroAleatorio {
 
             while (intentosConsumidos < INTENTOS){
                 diferencia = INTENTOS-intentosConsumidos;
-                mostrarPista(numero, secretNumber);
+                mostrarPista(numero, SECRET_NUMBER);
                 System.out.print("Has fallado, intentalo otra vez, te quedan "+diferencia+" intentos. Pruebe otro numero: ");
                 numero = scanner.nextInt();
-                if (numero == secretNumber){
+                if (numero == SECRET_NUMBER){
                     System.out.println("¡Enhorabuena!. Has acertado a los "+intentosConsumidos+" intentos");
                     break;
                 }
@@ -53,7 +53,7 @@ public class AdivinanzaNumeroAleatorio {
             }
 
             if (intentosConsumidos == INTENTOS)
-                System.out.println("Vaya, no pudiste adivinarlo. El numero a adivinar era "+secretNumber);
+                System.out.println("Vaya, no pudiste adivinarlo. El numero a adivinar era "+SECRET_NUMBER);
 
 
 
