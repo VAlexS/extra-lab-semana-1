@@ -9,9 +9,11 @@ public class TablasDeMultiplicar {
         System.out.print("¿De que numero quieres averiguar su tabla de multiplicar? ");
         int numero = scanner.nextInt();
 
+        int resultado;
+
         for (int i = 0; i <= 10; i++) {
-            int multiplicacion = numero*i;
-            System.out.println(numero+" * "+i+" = "+multiplicacion);
+            resultado = numero*i;
+            System.out.println(numero+" * "+i+" = "+resultado);
 
         }
 
