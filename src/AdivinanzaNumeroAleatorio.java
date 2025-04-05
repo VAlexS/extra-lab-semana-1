@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class AdivinanzaNumeroAleatorio {
 
-    public static void mostrarMenorMayor(int numeroIntroducido, int numeroAdivinar){
+    public static void mostrarPista(int numeroIntroducido, int numeroAdivinar){
 
         if (numeroAdivinar < numeroIntroducido)
             System.out.println("PISTA: El numero a adivinar es menor que el que has introducido");
@@ -37,7 +37,7 @@ public class AdivinanzaNumeroAleatorio {
 
             while (intentosConsumidos < INTENTOS){
                 diferencia = INTENTOS-intentosConsumidos;
-                mostrarMenorMayor(numero, secretNumber);
+                mostrarPista(numero, secretNumber);
                 System.out.print("Has fallado, intentalo otra vez, te quedan "+diferencia+" intentos. Pruebe otro numero: ");
                 numero = scanner.nextInt();
                 if (numero == secretNumber){
